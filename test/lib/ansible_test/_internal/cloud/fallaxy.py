@@ -44,7 +44,7 @@ class FallaxyProvider(CloudProvider):
         if os.environ.get('ANSIBLE_FALLAXY_CONTAINER'):
             self.image = os.environ.get('ANSIBLE_FALLAXY_CONTAINER')
         else:
-            self.image = 'quay.io/ansible/fallaxy-test-container:1.0.0'
+            self.image = 'ghcr.io/ansible-community/eol-ansible/generic-fallaxy-test-container:1.0.0'
         self.container_name = ''
 
     def filter(self, targets, exclude):

@@ -49,7 +49,7 @@ class ACMEProvider(CloudProvider):
         if os.environ.get('ANSIBLE_ACME_CONTAINER'):
             self.image = os.environ.get('ANSIBLE_ACME_CONTAINER')
         else:
-            self.image = 'quay.io/ansible/acme-test-container:2.0.0'
+            self.image = 'ghcr.io/ansible-community/eol-ansible/generic-acme-test-container:2.0.0'
         self.container_name = ''
 
     def _wait_for_service(self, protocol, acme_host, port, local_part, name):

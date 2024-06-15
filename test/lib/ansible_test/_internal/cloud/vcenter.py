@@ -43,7 +43,7 @@ class VcenterProvider(CloudProvider):
         if os.environ.get('ANSIBLE_VCSIM_CONTAINER'):
             self.image = os.environ.get('ANSIBLE_VCSIM_CONTAINER')
         else:
-            self.image = 'quay.io/ansible/vcenter-test-container:1.7.0'
+            self.image = 'ghcr.io/ansible-community/eol-ansible/generic-vcenter-test-container:1.7.0'
         self.container_name = ''
 
         # VMware tests can be run on govcsim or BYO with a static config file.
