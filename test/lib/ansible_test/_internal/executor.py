@@ -1399,7 +1399,7 @@ def run_pypi_proxy(args):  # type: (EnvironmentConfig) -> t.Tuple[t.Optional[str
     if not use_proxy:
         return None, None
 
-    proxy_image = 'quay.io/ansible/pypi-test-container:1.0.0'
+    proxy_image = 'ghcr.io/ansible-community/eol-ansible/generic-pypi-test-container:1.0.0'
     port = 3141
 
     options = [

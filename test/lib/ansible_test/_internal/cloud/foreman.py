@@ -36,7 +36,7 @@ class ForemanProvider(CloudProvider):
 
     DOCKER_SIMULATOR_NAME = 'foreman-stub'
 
-    DOCKER_IMAGE = 'quay.io/ansible/foreman-test-container:1.4.0'
+    DOCKER_IMAGE = 'ghcr.io/ansible-community/eol-ansible/generic-foreman-test-container:1.4.0'
     """Default image to run Foreman stub from.
 
     The simulator must be pinned to a specific version
