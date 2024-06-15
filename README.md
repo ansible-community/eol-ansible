@@ -7,15 +7,16 @@ There are collections which still support Ansible/ansible-base/ansible-core vers
 The End of Life branches that this repository currently supports (in the sense that it *tries* to keep CI using these branches working as much as possible with the least amount of effort):
 
 - `stable-2.9`:
+  - ⚠ Note that the Fedora 31 image does not seem to work on GHA anymore.
   - Use alternative container images from this repository's container registry in OCI format.
-    - Note that the Fedora 31 image does not seem to work on GHA anymore.
 
 - `stable-2.10`:
+  - ⚠ Note that the Fedora 31 and Fedora 32 images do not seem to work on GHA anymore.
   - Use alternative container images from this repository's container registry in OCI format.
-    - Note that the Fedora 31 and Fedora 32 images do not seem to work on GHA anymore.
   - Cherry-picked [commit `Use git merge-base without --fork-point`](https://github.com/ansible/ansible/commit/9406242c8060beb6205219f65231f3fec28673d3) to fix change detection outside of AZP.
 
 - `stable-2.11`:
+  - ⚠ Note that the Ubuntu 20.04 image does not seem to work on GHA anymore.
   - Cherry-picked [commit `Use git merge-base without --fork-point`](https://github.com/ansible/ansible/commit/9406242c8060beb6205219f65231f3fec28673d3) to fix change detection outside of AZP.
 
 ## Using this repository
