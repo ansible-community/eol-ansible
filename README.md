@@ -18,6 +18,16 @@ The End of Life branches that this repository currently supports (in the sense t
 - `stable-2.11`:
   - ⚠ Note that the Ubuntu 20.04 image does not seem to work on GHA anymore.
   - Cherry-picked [commit `Use git merge-base without --fork-point`](https://github.com/ansible/ansible/commit/9406242c8060beb6205219f65231f3fec28673d3) to fix change detection outside of AZP.
+  - Cherry-picked [commit `runtime-metadata sanity test: do not fail deprecation version checks if galaxy.yml has empty version`](https://github.com/ansible/ansible/commit/faf446a895590344e1563455edba05809401f9c8) to fix the runtime-metadata deprecation version test if `galaxy.yml`'s `version` is `null`.
+
+- `stable-2.12`:
+  - Cherry-picked [commit `runtime-metadata sanity test: do not fail deprecation version checks if galaxy.yml has empty version`](https://github.com/ansible/ansible/commit/faf446a895590344e1563455edba05809401f9c8) to fix the runtime-metadata deprecation version test if `galaxy.yml`'s `version` is `null`.
+
+- `stable-2.13`:
+  - Cherry-picked [commit `runtime-metadata sanity test: do not fail deprecation version checks if galaxy.yml has empty version`](https://github.com/ansible/ansible/commit/faf446a895590344e1563455edba05809401f9c8) to fix the runtime-metadata deprecation version test if `galaxy.yml`'s `version` is `null`.
+
+- `stable-2.14`:
+  - Cherry-picked [commit `runtime-metadata sanity test: do not fail deprecation version checks if galaxy.yml has empty version`](https://github.com/ansible/ansible/commit/faf446a895590344e1563455edba05809401f9c8) to fix the runtime-metadata deprecation version test if `galaxy.yml`'s `version` is `null`.
 
 ## Using this repository
 
@@ -25,7 +35,7 @@ If you are using the [`ansible-community/ansible-test-gh-action` GitHub action](
 ```yaml
       - uses: ansible-community/ansible-test-gh-action@main
         with:
-          ansible-core-github-repository-slug: ${{ contains(fromJson('["stable-2.9", "stable-2.10", "stable-2.11"]'), matrix.ansible) && 'ansible-community/eol-ansible' || 'ansible/ansible' }}
+          ansible-core-github-repository-slug: ${{ contains(fromJson('["stable-2.9", "stable-2.10", "stable-2.11", "stable-2.12", "stable-2.13", "stable-2.14"]'), matrix.ansible) && 'ansible-community/eol-ansible' || 'ansible/ansible' }}
 ```
 An example PR adding this change is [ansible-collections/community.internal_test_tools#124](https://github.com/ansible-collections/community.internal_test_tools/pull/124).
 
